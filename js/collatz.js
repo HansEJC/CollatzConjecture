@@ -106,7 +106,7 @@ function saveValue(e) {
 }
 
 function saveParameter() {
-  const url = '';
+  let url = '';
   const params = {};
   document.querySelectorAll('input').forEach((el) => {
     if (el.value.length > 0) params[el.id] = el.value;
