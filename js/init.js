@@ -42,20 +42,6 @@
   }
 }());
 
-if ("serviceWorker" in navigator) {
-  //Adds manifest and stuff
-  const { head } = document;
-  const mani = document.createElement("link"), apple = document.createElement("link"), theme = document.createElement("meta");
-  mani.rel = "manifest"; apple.rel = "apple-touch-icon"; theme.name = "theme-color";
-  mani.href = "manifest.json"; apple.href = "images/apple-icon-180.png"; theme.content = "#800080";
-  head.appendChild(mani); head.appendChild(apple); head.appendChild(theme);
-
-  //Makes website available offline
-  window.addEventListener("load", function () {
-    navigator.serviceWorker.register("sw.js");
-  });
-}
-
 //fade in and fadeout
 function _(el) {
   if (!(this instanceof _)) {
